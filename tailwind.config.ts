@@ -14,6 +14,23 @@ export default {
     },
     extend: {
       colors: {
+        /* Brand colors for portfolio theme */
+        brand: {
+          primary: "hsl(var(--brand-primary))",
+          secondary: "hsl(var(--brand-secondary))",
+          accent: "hsl(var(--brand-accent))",
+        },
+        content: {
+          primary: "hsl(var(--content-primary))",
+          secondary: "hsl(var(--content-secondary))",
+          muted: "hsl(var(--content-muted))",
+        },
+        surface: {
+          DEFAULT: "hsl(var(--surface))",
+          elevated: "hsl(var(--surface-elevated))",
+          hover: "hsl(var(--surface-hover))",
+        },
+        /* Shadcn colors */
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -47,16 +64,21 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+      },
+      backgroundImage: {
+        'gradient-brand': 'var(--gradient-brand)',
+        'gradient-surface': 'var(--gradient-surface)',
+        'gradient-text': 'var(--gradient-text)',
+      },
+      boxShadow: {
+        'brand': 'var(--shadow-brand)',
+        'portfolio-sm': 'var(--shadow-sm)',
+        'portfolio-md': 'var(--shadow-md)', 
+        'portfolio-lg': 'var(--shadow-lg)',
+      },
+      transitionTimingFunction: {
+        'smooth': 'var(--transition-smooth)',
+        'bounce': 'var(--transition-bounce)',
       },
       borderRadius: {
         lg: "var(--radius)",
