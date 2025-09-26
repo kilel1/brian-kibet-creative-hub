@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
-import heroImage from "@/assets/brian-hero.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -28,7 +27,7 @@ const Hero = () => {
       <div className="absolute bottom-40 left-20 w-4 h-4 bg-brand-accent rounded-full animate-float opacity-30" style={{animationDelay: '2s'}} />
       
       {/* Content */}
-      <div className="container mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
+      <div className="container mx-auto max-w-4xl text-center relative z-10">
         <div className="space-y-8 animate-fade-in">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-surface-elevated/50 backdrop-blur-glass rounded-full border border-border/30">
@@ -52,13 +51,13 @@ const Hero = () => {
               </p>
             </div>
             
-            <p className="text-lg text-content-muted max-w-lg leading-relaxed">
+            <p className="text-lg text-content-muted max-w-2xl mx-auto leading-relaxed">
               I craft exceptional digital experiences through clean code, 
               beautiful design, and innovative solutions that solve real-world problems.
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
               onClick={() => scrollToSection('projects')}
@@ -78,7 +77,7 @@ const Hero = () => {
           </div>
           
           {/* Social Links */}
-          <div className="flex gap-4 pt-4">
+          <div className="flex gap-4 pt-4 justify-center">
             {[
               { icon: Github, href: "https://github.com", label: "GitHub" },
               { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
@@ -96,31 +95,14 @@ const Hero = () => {
               </a>
             ))}
           </div>
-        </div>
-        
-        <div className="relative lg:justify-self-end animate-scale-in" style={{animationDelay: '0.3s'}}>
-          <div className="relative group">
-            {/* Glow Effect */}
-            <div className="absolute -inset-4 bg-gradient-glow rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" />
-            
-            {/* Image Container */}
-            <div className="relative">
-              <img
-                src={heroImage}
-                alt="Brian Kibet - Full Stack Developer & UI/UX Designer"
-                className="rounded-2xl shadow-portfolio-xl max-w-md w-full relative z-10 group-hover:scale-105 transition-transform duration-500"
-              />
-              
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-brand opacity-5 rounded-2xl z-20 group-hover:opacity-10 transition-opacity duration-500" />
-              
-              {/* Floating Skills */}
-              <div className="absolute -top-4 -right-4 bg-surface-elevated/90 backdrop-blur-glass px-4 py-2 rounded-full border border-border/30 animate-float">
-                <span className="text-sm font-medium text-brand-primary">React</span>
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-surface-elevated/90 backdrop-blur-glass px-4 py-2 rounded-full border border-border/30 animate-float" style={{animationDelay: '1s'}}>
-                <span className="text-sm font-medium text-brand-secondary">TypeScript</span>
-              </div>
+          
+          {/* Floating Skills */}
+          <div className="relative pt-8">
+            <div className="absolute top-0 left-1/4 bg-surface-elevated/90 backdrop-blur-glass px-4 py-2 rounded-full border border-border/30 animate-float">
+              <span className="text-sm font-medium text-brand-primary">React</span>
+            </div>
+            <div className="absolute top-8 right-1/4 bg-surface-elevated/90 backdrop-blur-glass px-4 py-2 rounded-full border border-border/30 animate-float" style={{animationDelay: '1s'}}>
+              <span className="text-sm font-medium text-brand-secondary">TypeScript</span>
             </div>
           </div>
         </div>
